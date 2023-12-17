@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OpenCart App Regression Suite" verbose="3"
+	thread-count="4" parallel="tests">
+
+	<listeners>
+		<!--	<listener
+			class-name="com.qa.opencard.listeners.ExtentReportListener" /> -->
+
+		<listener
+			class-name="com.qa.opencard.listeners.AnnotationTransformer" />
+		<listener
+			class-name="com.qa.opencard.listeners.TestAllureListener" />
+
+	</listeners>
+
+	<test name="Login Page Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.opencard.tests.LoginPageTest" />
+		</classes>
+	</test>
+
+	<!--  <test name="Login Page Negative Test">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
+		</classes>
+	</test>
+	<test name="Accounts Page Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.opencard.tests.AccountsPageTest" />
+		</classes>
+	</test>
+	<test name="Prouct Results Page Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.opencard.tests.ProuctResultsPageTest" />
+		</classes>
+	</test>
+	<test name="Register Page Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.opencard.tests.RegisterPageTest" />
+		</classes>
+	</test>   -->
+</suite>
