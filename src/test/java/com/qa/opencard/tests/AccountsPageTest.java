@@ -1,6 +1,9 @@
 package com.qa.opencard.tests;
 
 import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -80,10 +83,12 @@ public class AccountsPageTest extends BaseTest {
 	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	public void searchTest() {
+
 		searchResultsPage = accPage.doSearch("MacBook");
 		productInfoPage = searchResultsPage.selectProduct("MacBook Pro");
 		String actProductHeader = productInfoPage.getProductHeaderName();
 		AssertEquals(actProductHeader, "MacBook Pro", "Search Test Failed");
+
 	}
 
 }

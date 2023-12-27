@@ -5,8 +5,8 @@
 	thread-count="4" parallel="tests">
 
 	<listeners>
-		<!--	<listener
-			class-name="com.qa.opencard.listeners.ExtentReportListener" /> -->
+			<listener
+			class-name="com.qa.opencard.listeners.ExtentReportListener" /> 
 
 		<listener
 			class-name="com.qa.opencard.listeners.AnnotationTransformer" />
@@ -22,7 +22,7 @@
 		</classes>
 	</test>
 
-	<!--  <test name="Login Page Negative Test">
+	  <test name="Login Page Negative Test">
 		<parameter name="browser" value="Chrome" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
@@ -45,5 +45,5 @@
 		<classes>
 			<class name="com.qa.opencard.tests.RegisterPageTest" />
 		</classes>
-	</test>   -->
+	</test>   
 </suite>

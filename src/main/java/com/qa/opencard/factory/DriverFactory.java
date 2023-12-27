@@ -56,6 +56,32 @@ public class DriverFactory {
 //
 //	}
 
+	// new syntax for switch case statement
+
+//	public WebDriver initDriver(Properties prop) {
+//		String browserName = prop.getProperty("browser");
+//		// String browserName = System.getProperty("browser");
+//		System.out.println("The browser name is: " + browserName);
+//		highlight = prop.getProperty("highlight");
+//		optionsManager = new OptionsManager(prop);
+//
+//		switch (browserName.toLowerCase().trim()) {
+//		case "chrome" -> tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+//		// driver = new ChromeDriver(optionsManager.getChromeOptions());
+//
+//		case "firefox" -> tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+//		// driver = new FirefoxDriver(optionsManager.getFirefoxOptions());
+//
+//		case "edge" -> tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+//		// driver = new EdgeDriver(optionsManager.getEdgeOptions());
+//
+//		case "safari" -> tlDriver.set(new SafariDriver());
+//		// driver = new SafariDriver();
+//
+//		default -> System.out.println("Please pass the right browser...." + browserName);
+//		// throw new FrameworkException("INVALID BROWSER...");
+//		}
+
 	public WebDriver initDriver(Properties prop) {
 		String browserName = prop.getProperty("browser");
 		// String browserName = System.getProperty("browser");
@@ -86,6 +112,7 @@ public class DriverFactory {
 			System.out.println("Please pass the right browser...." + browserName);
 			throw new FrameworkException("INVALID BROWSER...");
 		}
+
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
 //		driver.manage().window().maximize();
