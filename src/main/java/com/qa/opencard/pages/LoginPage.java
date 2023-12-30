@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.utils.ElementUtils;
-import com.qa.opencard.utils.JavaScriptUtil;
+//import com.qa.opencard.utils.JavaScriptUtil;
 
 import io.qameta.allure.Step;
 
@@ -17,7 +17,7 @@ public class LoginPage {
 
 	private WebDriver driver;
 	private ElementUtils eleUtil;
-	private JavaScriptUtil jsutil;
+	//private JavaScriptUtil jsutil;
 
 	// By locators: OR
 	private By userName = By.id("input-email");
@@ -32,7 +32,7 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		eleUtil = new ElementUtils(this.driver);
-		jsutil = new JavaScriptUtil(this.driver);
+		//jsutil = new JavaScriptUtil(this.driver);
 
 	}
 
