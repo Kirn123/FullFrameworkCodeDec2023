@@ -82,6 +82,25 @@ public class DriverFactory {
 //		// throw new FrameworkException("INVALID BROWSER...");
 //		}
 
+	/*
+	 * This code is for again for enum practice for that used enum Browser2
+	 */
+
+//	public WebDriver initDriver1(Properties prop) {
+//	    String browserName = prop.getProperty("browser");
+//	    System.out.println("The browser name is: " + browserName);
+//	    highlight = prop.getProperty("highlight");
+//	    optionsManager = new OptionsManager(prop);
+//
+//	    Browser2 selectedBrowser = Browser2.valueOf(browserName.toUpperCase());
+//	    WebDriver driver = selectedBrowser.initDriver(optionsManager);
+//
+//	    driver.manage().deleteAllCookies();
+//	    driver.manage().window().maximize();
+//	    
+//	    return driver;
+//	}
+
 	public WebDriver initDriver(Properties prop) {
 		String browserName = prop.getProperty("browser");
 		// String browserName = System.getProperty("browser");

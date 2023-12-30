@@ -1,7 +1,11 @@
 package com.qa.opencard.pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.utils.ElementUtils;
@@ -21,6 +25,7 @@ public class LoginPage {
 	private By loginBtn = By.xpath("//input[@value='Login']");
 	private By forgotPwdLink = By.linkText("Forgotten Password");
 	private By logo = By.cssSelector("img[title='naveenopencart']");
+	private By footerlinkList = By.xpath("//div[contains(@class,'col-sm-3')]//li");
 	private By registerLink = By.linkText("Register");
 
 	// page const...
@@ -59,6 +64,19 @@ public class LoginPage {
 	public boolean isLogoExist() {
 		return eleUtil.waitForVisibilityOfElement(logo, AppConstants.SHORT_DEFAUTT_WAIT).isDisplayed();
 
+	}
+
+	@Step("Validate footer links")
+
+	public List<String> getloginfooterlinks() {
+		List<WebElement> footersList = eleUtil.waitForVisibilityOfElements(footerlinkList,
+				AppConstants.MEDIUM_DEFAUTT_WAIT);
+		List<String> footersValList = new ArrayList<String>();
+		for (WebElement e : footersList) {
+			String text = e.getText();
+			footersValList.add(text);
+		}
+		return footersValList;
 	}
 
 	@Step("Login to the application")

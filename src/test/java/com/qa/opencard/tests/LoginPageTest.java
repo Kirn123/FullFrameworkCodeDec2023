@@ -1,9 +1,12 @@
 package com.qa.opencard.tests;
 
+import java.util.List;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.opencard.base.BaseTest;
+import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.listeners.TestAllureListener;
 import com.qa.opencard.utils.Log;
 
@@ -59,10 +62,19 @@ public class LoginPageTest extends BaseTest {
 		AssertTrue(loginPage.isLogoExist(), "Logo is missing ");
 	}
 
+	@Description("Login page footer link count test")
+	@Severity(SeverityLevel.CRITICAL)
+	@Test(priority = 5)
+	public void accPageHeadersCountTest() {
+		List<String> footersList = loginPage.getloginfooterlinks();
+		System.out.println(footersList);
+		AssertEquals(footersList.size(), AppConstants.ACCOUNTS_PAGE_HEADERS_COUNT, "Page header count is wrong");
+	}
+
 	@Description("Login page user Login test")
 	@Severity(SeverityLevel.CRITICAL)
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void doLoginTest() {
 
 		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
