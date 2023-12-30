@@ -68,7 +68,7 @@ public class LoginPageTest extends BaseTest {
 	public void loginPagefootersCountTest() {
 		List<String> footersList = loginPage.getloginfooterlinks();
 		System.out.println(footersList);
-		AssertEquals(footersList.size(), AppConstants.ACCOUNTS_PAGE_HEADERS_COUNT, "Page header count is wrong");
+		AssertEquals(footersList.size(), AppConstants.LOGIN_PAGE_FOOTERS_COUNT, "Page header count is wrong");
 	}
 
 	@Description("Login page user Login test")
