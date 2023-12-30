@@ -18,7 +18,8 @@ public class AppConstants {
 
 	public static final int POLLING_DEFAUTT_WAIT = 2;
 
-	public static final int ACCOUNTS_PAGE_HEADERS_COUNT = 16;
+	public static final int ACCOUNTS_PAGE_HEADERS_COUNT = 4;
+	public static final int LOGIN_PAGE_FOOTERS_COUNT = 15;
 
 	public static final List<String> ACCOUNTS_PAGE_HEADERS_LIST = Arrays.asList("My Account", "My Orders",
 			"My Affiliate Account", "Newsletter");

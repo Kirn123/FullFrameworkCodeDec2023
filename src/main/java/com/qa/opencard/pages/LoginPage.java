@@ -25,7 +25,7 @@ public class LoginPage {
 	private By loginBtn = By.xpath("//input[@value='Login']");
 	private By forgotPwdLink = By.linkText("Forgotten Password");
 	private By logo = By.cssSelector("img[title='naveenopencart']");
-	private By footerlinkList = By.xpath("//div[contains(@class,'col-sm-3')]//li");
+	private By footerlinkList = By.xpath("//div[contains(@class,'col-sm-3')]//li/a");
 	private By registerLink = By.linkText("Register");
 
 	// page const...

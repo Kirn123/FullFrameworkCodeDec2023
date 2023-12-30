@@ -65,7 +65,7 @@ public class LoginPageTest extends BaseTest {
 	@Description("Login page footer link count test")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority = 5)
-	public void accPageHeadersCountTest() {
+	public void loginPagefootersCountTest() {
 		List<String> footersList = loginPage.getloginfooterlinks();
 		System.out.println(footersList);
 		AssertEquals(footersList.size(), AppConstants.ACCOUNTS_PAGE_HEADERS_COUNT, "Page header count is wrong");
