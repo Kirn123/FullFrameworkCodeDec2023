@@ -104,7 +104,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.30</version>      
+			<version>1.18.30</version>
 		</dependency>
 
 	</dependencies>
@@ -131,8 +131,8 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<suiteXmlFile>
-							src/test/resources/testrunners/testng_regresion.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>src/test/resources/testrunners/testng_regresion.xml</suiteXmlFile> -->
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 
 
