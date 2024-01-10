@@ -28,6 +28,11 @@ public class OptionsManager {
 			co.addArguments("--incognito");
 		}
 
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("browserName", "chrome");
+			//co.setBrowserVersion(prop.getProperty("browserversion").trim());
+		}
+
 		return co;
 
 	}
@@ -40,6 +45,11 @@ public class OptionsManager {
 
 		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
 			fo.addArguments("--incognito");
+		}
+		
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("browserName", "firefox");
+			//co.setBrowserVersion(prop.getProperty("browserversion").trim());
 		}
 
 		return fo;
@@ -55,6 +65,12 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
 			fo.addArguments("--incognito");
 		}
+		
+		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setCapability("browserName", "edge");
+			//co.setBrowserVersion(prop.getProperty("browserversion").trim());
+		}
+
 
 		return eo;
 

@@ -22,7 +22,7 @@
 		</classes>
 	</test>
 
-	  <test name="Login Page Negative Test">
+	   <test name="Login Page Negative Test">
 		<parameter name="browser" value="Chrome" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
@@ -34,6 +34,7 @@
 			<class name="com.qa.opencard.tests.AccountsPageTest" />
 		</classes>
 	</test>
+	
 	<test name="Prouct Results Page Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -45,5 +46,5 @@
 		<classes>
 			<class name="com.qa.opencard.tests.RegisterPageTest" />
 		</classes>
-	</test>   
+	</test>  
 </suite>
