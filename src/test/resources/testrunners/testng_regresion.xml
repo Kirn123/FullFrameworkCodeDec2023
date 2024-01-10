@@ -5,46 +5,53 @@
 	thread-count="4" parallel="tests">
 
 	<listeners>
-			<listener
-			class-name="com.qa.opencard.listeners.ExtentReportListener" /> 
-
+		<listener
+			class-name="com.qa.opencard.listeners.ExtentReportListener" />
 		<listener
 			class-name="com.qa.opencard.listeners.AnnotationTransformer" />
 		<listener
 			class-name="com.qa.opencard.listeners.TestAllureListener" />
-
 	</listeners>
 
 	<test name="Login Page Test">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="113" />
+		<parameter name="testname" value="Login Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageTest" />
 		</classes>
 	</test>
 
-	   <test name="Login Page Negative Test">
+	<test name="Login Page Negative Test">
 		<parameter name="browser" value="Chrome" />
+		<parameter name="browserversion" value="Login Page Negative Test" />
+		<parameter name="testname" value="Login Page Negative Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
 		</classes>
 	</test>
 	<test name="Accounts Page Test">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="113" />
+		<parameter name="testname" value="Accounts Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.AccountsPageTest" />
 		</classes>
 	</test>
-	
 	<test name="Prouct Results Page Test">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="113" />
+		<parameter name="testname" value="Prouct Results Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.ProuctResultsPageTest" />
 		</classes>
 	</test>
 	<test name="Register Page Test">
 		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="113" />
+		<parameter name="testname" value="Register Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.RegisterPageTest" />
 		</classes>
-	</test>  
+	</test>
 </suite>

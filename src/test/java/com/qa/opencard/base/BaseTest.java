@@ -30,19 +30,21 @@ public class BaseTest {
 	protected SoftAssert softAssert;
 	protected RegisterPage registerPage;
 	protected LoginPageNegative doWronglogin;
-	
-	@BeforeSuite                 
+
+	@BeforeSuite
 	public void log() {
 		DOMConfigurator.configure("log4j.xml");
 	}
 
-	@Parameters({ "browser" })
+	@Parameters({"browser","browserversion","testname"})
 	@BeforeTest
-	public void setup(String browserName) {
+	public void setup(String browserName, String browserVersion,String testName) {
 		df = new DriverFactory();
 		prop = df.initprop();
 		if (browserName != null) {
 			prop.setProperty("browser", browserName);
+			prop.setProperty("browserversion", browserVersion);
+			prop.setProperty("testname", testName);
 		}
 		driver = df.initDriver(prop);
 		df.launchURL(prop);
