@@ -23,8 +23,8 @@
 	</test>
 
 	<test name="Login Page Negative Test">
-		<parameter name="browser" value="Chrome" />
-		<parameter name="browserversion" value="113" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="119" />
 		<parameter name="testname" value="Login Page Negative Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
