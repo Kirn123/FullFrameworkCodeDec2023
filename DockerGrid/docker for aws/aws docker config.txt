@@ -1,0 +1,29 @@
+//install java
+ 
+sudo yum install java-1.8.0-openjdk
+
+//install Docker
+
+sudo yum install docker
+
+//start docker service
+
+sudo service docker start
+
+//install Docker-Compose
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+//give the permissions
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+//change the directory of docker compose
+sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
+//check the docker-compose version
+docker-compose version
+//create the network
+sudo docker network create selenoid
+//run the container
+sudo docker-compose up -d
+
+
