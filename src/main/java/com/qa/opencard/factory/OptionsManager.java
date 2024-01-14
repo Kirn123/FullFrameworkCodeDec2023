@@ -29,11 +29,19 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
 			co.addArguments("--incognito");
 		}
+		
+//		enable this if condition when you run the testcases on selenium grid sanity xml 
+//
+//		
+//		 if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+//		co.setCapability("browserName", "chrome"); }
+		
+		
+		//this if condition is for running the testcases on selenoid UI regression xml
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setCapability("browserName", "chrome");
 			co.setBrowserVersion(prop.getProperty("browserversion").trim());
-
 			Map<String, Object> selenoidOptions = new HashMap<>();
 			selenoidOptions.put("screenResolution", "1280x1024x24");
 			selenoidOptions.put("enableVNC", true);
@@ -55,6 +63,13 @@ public class OptionsManager {
 		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
 			fo.addArguments("--incognito");
 		}
+		
+       //enable this if condition when you run the testcases on selenium grid sanity xml 
+		
+//		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+//			fo.setCapability("browserName", "firefox"); }
+//		
+		//this if condition is for running the testcases on selenoid UI regression xml
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setCapability("browserName", "firefox");
@@ -71,6 +86,8 @@ public class OptionsManager {
 		return fo;
 
 	}
+	
+	 //this browser is for selenium grid when you run the testcases on selenium grid sanity xml 
 
 	public EdgeOptions getEdgeOptions() {
 		eo = new EdgeOptions();
@@ -84,7 +101,6 @@ public class OptionsManager {
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			eo.setCapability("browserName", "edge");
-			// co.setBrowserVersion(prop.getProperty("browserversion").trim());
 		}
 
 		return eo;

@@ -35,6 +35,8 @@ public class BaseTest {
 	public void log() {
 		DOMConfigurator.configure("log4j.xml");
 	}
+	
+	//This Before test is for the running the testcases in selenoid grid environment and regression.xml
 
 	@Parameters({"browser","browserversion","testname"})
 	@BeforeTest
@@ -56,7 +58,29 @@ public class BaseTest {
 		registerPage = new RegisterPage(driver);
 		doWronglogin = new LoginPageNegative(driver);
 	}
-
+	
+	/*This Before test is for the running the testcases in local and selenium grid environment and sanity.xml
+	 */
+//	@Parameters({"browser"})
+//	@BeforeTest
+//	public void setup(String browserName) {
+//		df = new DriverFactory();
+//		prop = df.initprop();
+//		if (browserName != null) {
+//			prop.setProperty("browser", browserName);
+//		}
+//		driver = df.initDriver(prop);
+//		df.launchURL(prop);
+//		loginPage = new LoginPage(driver);
+//		softAssert = new SoftAssert();
+//		accPage = new AccountsPage(driver);
+//		searchResultsPage = new SearchResultsPage(driver);
+//		productInfoPage = new ProductInfoPage(driver);
+//		registerPage = new RegisterPage(driver);
+//		doWronglogin = new LoginPageNegative(driver);
+//	}
+//	
+	
 	@AfterTest
 	public void tearDown() throws SocketException {
 		driver.quit();

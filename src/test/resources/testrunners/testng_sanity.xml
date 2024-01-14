@@ -7,18 +7,23 @@
 	<listeners>
 		<listener
 			class-name="com.qa.opencard.listeners.ExtentReportListener" />
-
 		<listener
 			class-name="com.qa.opencard.listeners.AnnotationTransformer" />
 		<listener
 			class-name="com.qa.opencard.listeners.TestAllureListener" />
-
 	</listeners>
 
 	<test name="Login Page Test">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageTest" />
 		</classes>
 	</test>
+	<test name="Login Page Negative Test">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
+		</classes>
+	</test>
+
 </suite>

@@ -160,7 +160,6 @@ public class DriverFactory {
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
 //		driver.manage().window().maximize();
-//		driver.manage().window().maximize();
 		// return driver;
 		return getDriver();
 

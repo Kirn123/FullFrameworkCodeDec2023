@@ -14,8 +14,8 @@
 	</listeners>
 
 	<test name="Login Page Test">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="113" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Login Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageTest" />
@@ -23,32 +23,35 @@
 	</test>
 
 	<test name="Login Page Negative Test">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="119" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Login Page Negative Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.LoginPageNegativeTest" />
 		</classes>
 	</test>
+
 	<test name="Accounts Page Test">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="113" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Accounts Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.AccountsPageTest" />
 		</classes>
 	</test>
+
 	<test name="Prouct Results Page Test">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="113" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Prouct Results Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.ProuctResultsPageTest" />
 		</classes>
 	</test>
+
 	<test name="Register Page Test">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="113" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Register Page Test" />
 		<classes>
 			<class name="com.qa.opencard.tests.RegisterPageTest" />
