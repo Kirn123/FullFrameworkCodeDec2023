@@ -9,6 +9,8 @@ import com.qa.opencard.base.BaseTest;
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.listeners.TestAllureListener;
 import com.qa.opencard.utils.ExcelUtils;
+import com.qa.opencard.utils.Log;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -24,6 +26,7 @@ public class ProuctResultsPageTest extends BaseTest {
 
 	@BeforeClass
 	public void productInfoSetUp() {
+		Log.info("This is product Info SetUp method");
 		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
@@ -56,6 +59,7 @@ public class ProuctResultsPageTest extends BaseTest {
 	@Severity(SeverityLevel.NORMAL)
 	@Test
 	public void productInfoTest() {
+		Log.startTestCase("-----Start product Info Test------");
 		searchResultsPage = accPage.doSearch("MacBook");
 		productInfoPage = searchResultsPage.selectProduct("MacBook Pro");
 		Map<String, String> productDetailsMap = productInfoPage.getProductDetails();

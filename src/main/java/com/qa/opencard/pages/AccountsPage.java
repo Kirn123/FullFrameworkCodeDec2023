@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.utils.ElementUtils;
+import com.qa.opencard.utils.Log;
 
 import io.qameta.allure.Step;
 
@@ -33,14 +34,16 @@ public class AccountsPage {
 	@Step("Getting Accounts page title")
 	public String getAccPageTitle() {
 		String title = eleUtil.waitForTitleIs(AppConstants.ACCOUNTS_PAGE_TITLE, AppConstants.SHORT_DEFAUTT_WAIT);
-		System.out.println("Acc page title:" + title);
+		//TSystem.out.println("Acc page title:" + title);
+		Log.info("Acc page title:"+ title);
 		return title;
 	}
 
 	@Step("Getting Accounts page Url")
 	public String getAccPageURL() {
 		String url = eleUtil.waitForURLContains(AppConstants.ACC_PAGE_URL_FRACTION, AppConstants.SHORT_DEFAUTT_WAIT);
-		System.out.println("acc page url:" + url);
+		//System.out.println("acc page url:" + url);
+		Log.info("acc page url:" + url);
 		return url;
 	}
 

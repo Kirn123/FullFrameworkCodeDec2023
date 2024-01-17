@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.utils.ElementUtils;
 import com.qa.opencard.utils.JavaScriptUtil;
+import com.qa.opencard.utils.Log;
 
 import io.qameta.allure.Step;
 
@@ -33,16 +34,20 @@ public class ProductInfoPage {
 		eleUtil = new ElementUtils(this.driver);
 		jsutil = new JavaScriptUtil(this.driver);
 	}
-	@Step ("Getting product header name")
+
+	@Step("Getting product header name")
 	public String getProductHeaderName() {
 		String productHeaderVal = eleUtil.doElementGetText(productHeader);
-		System.out.println("product header: " + productHeaderVal);
+		// System.out.println("product header: " + productHeaderVal);
+		Log.info("product header: " + productHeaderVal);
 		return productHeaderVal;
 	}
-	@Step ("Getting product image count")
+
+	@Step("Getting product image count")
 	public int getProductImagesCount() {
 		int imagesCount = eleUtil.waitForVisibilityOfElements(productImages, AppConstants.MEDIUM_DEFAUTT_WAIT).size();
-		System.out.println("Product " + getProductHeaderName() + " images count : " + imagesCount);
+		//System.out.println("Product " + getProductHeaderName() + " images count : " + imagesCount);
+		Log.info("Product " + getProductHeaderName() + " images count : " + imagesCount);
 		return imagesCount;
 	}
 
@@ -50,7 +55,7 @@ public class ProductInfoPage {
 //	Product Code: Product 18
 //	Reward Points: 800
 //	Availability: In Stock
-	@Step ("Getting product meta data")
+	@Step("Getting product meta data")
 	private void getProductMetaData() {
 		List<WebElement> metaDataList = eleUtil.waitForVisibilityOfElements(productMetaData,
 				AppConstants.MEDIUM_DEFAUTT_WAIT);
@@ -62,7 +67,8 @@ public class ProductInfoPage {
 			productMap.put(metaKey, metaVal);
 		}
 	}
-	@Step ("Getting product price data")
+
+	@Step("Getting product price data")
 	private void getProductPriceData() {
 		List<WebElement> metaPriceList = eleUtil.waitForVisibilityOfElements(productPriceData,
 				AppConstants.MEDIUM_DEFAUTT_WAIT);
@@ -74,12 +80,12 @@ public class ProductInfoPage {
 		productMap.put("price", productPrice); // manual key name is given
 		productMap.put("extaxprice", productExTaxPrice); // manual key name is given
 	}
-	@Step ("generating and storing product meta data")
+
+	@Step("generating and storing product meta data")
 	public Map<String, String> getProductDetails() {
 		productMap.put("productname", getProductHeaderName());
 		getProductMetaData();
 		getProductPriceData();
-
 		System.out.println(productMap);
 		return productMap;
 	}

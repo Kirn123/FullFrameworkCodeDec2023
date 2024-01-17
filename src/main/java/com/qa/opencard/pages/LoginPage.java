@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.utils.ElementUtils;
 //import com.qa.opencard.utils.JavaScriptUtil;
+import com.qa.opencard.utils.Log;
 
 import io.qameta.allure.Step;
 
@@ -17,7 +18,7 @@ public class LoginPage {
 
 	private WebDriver driver;
 	private ElementUtils eleUtil;
-	//private JavaScriptUtil jsutil;
+	// private JavaScriptUtil jsutil;
 
 	// By locators: OR
 	private By userName = By.id("input-email");
@@ -32,7 +33,7 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		eleUtil = new ElementUtils(this.driver);
-		//jsutil = new JavaScriptUtil(this.driver);
+		// jsutil = new JavaScriptUtil(this.driver);
 
 	}
 
@@ -41,7 +42,8 @@ public class LoginPage {
 	// page actions/methods:
 	public String getLoginPageTitle() {
 		String title = eleUtil.waitForTitleIs(AppConstants.LOGIN_PAGE_TITLE, AppConstants.SHORT_DEFAUTT_WAIT);
-		System.out.println("login page title:" + title);
+		// System.out.println("login page title:" + title);
+		Log.info("login page title:" + title);
 		return title;
 	}
 
@@ -49,7 +51,8 @@ public class LoginPage {
 
 	public String getLoginPageURL() {
 		String url = eleUtil.waitForURLContains(AppConstants.LOGIN_PAGE_URL_FRACTION, AppConstants.SHORT_DEFAUTT_WAIT);
-		System.out.println("login page url:" + url);
+		// System.out.println("login page url:" + url);
+		Log.info("login page url:" + url);
 		return url;
 	}
 

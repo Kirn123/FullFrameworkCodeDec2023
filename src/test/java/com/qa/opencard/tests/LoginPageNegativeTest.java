@@ -7,6 +7,8 @@ import com.qa.opencard.base.BaseTest;
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.listeners.TestAllureListener;
 import com.qa.opencard.utils.ExcelUtils;
+import com.qa.opencard.utils.Log;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -38,6 +40,7 @@ public class LoginPageNegativeTest extends BaseTest {
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(dataProvider = "incorrectLoginTestData")
 	public void doLoginwithWrongCredentialsTest(String username, String password) {
+		Log.startTestCase("-----Start do Login with Wrong Credentials Test------");
 		AssertTrue(doWronglogin.doLoginwithWrongCredentials(username, password),
 				"Do Login with Wrong Credentials Test is failed");
 

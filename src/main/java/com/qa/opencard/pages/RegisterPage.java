@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.qa.opencard.constants.AppConstants;
 import com.qa.opencard.utils.ElementUtils;
 import com.qa.opencard.utils.JavaScriptUtil;
+import com.qa.opencard.utils.Log;
 
 public class RegisterPage {
 
@@ -61,7 +62,8 @@ public class RegisterPage {
 
 		String successMesg = eleUtil.waitForVisibilityOfElement(successMessg, AppConstants.MEDIUM_DEFAUTT_WAIT)
 				.getText();
-		System.out.println(successMesg);
+		// System.out.println(successMesg);
+		Log.info("This is success message" + successMesg);
 
 		if (successMesg.contains(AppConstants.USER_REGISTER_SUCCESS_MESSG)) {
 			eleUtil.doClick(logoutLink);

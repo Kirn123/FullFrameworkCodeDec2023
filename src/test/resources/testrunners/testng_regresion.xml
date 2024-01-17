@@ -14,7 +14,7 @@
 	</listeners>
 
 	<test name="Login Page Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Login Page Test" />
 		<classes>
@@ -23,7 +23,7 @@
 	</test>
 
 	<test name="Login Page Negative Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Login Page Negative Test" />
 		<classes>
@@ -32,7 +32,7 @@
 	</test>
 
 	<test name="Accounts Page Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Accounts Page Test" />
 		<classes>
@@ -41,7 +41,7 @@
 	</test>
 
 	<test name="Prouct Results Page Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Prouct Results Page Test" />
 		<classes>
@@ -50,7 +50,7 @@
 	</test>
 
 	<test name="Register Page Test">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="117" />
 		<parameter name="testname" value="Register Page Test" />
 		<classes>
